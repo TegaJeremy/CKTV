@@ -3,7 +3,7 @@
 import { useEffect, useState } from 'react'
 import Link from 'next/link'
 import { motion } from 'framer-motion'
-import { ArrowLeft, Check, Copy, Download, Play, Share2 } from 'lucide-react'
+import { ArrowLeft, Check, Copy, Download, Play, Share2, ExternalLink} from 'lucide-react'
 import { useLanguage } from '@/components/language-provider'
 import { fadeUp, inView, stagger } from '@/components/motion-kit'
 import { VideoCard } from '@/components/video-card'
@@ -69,6 +69,11 @@ export function VideoView({ video, related }: { video: Video; related: Video[] }
           {description && <motion.p variants={fadeUp} className="video-desc">{description}</motion.p>}
 
           <motion.div variants={fadeUp} className="video-actions">
+            {video.youtubeUrl && (
+  <motion.a href={video.youtubeUrl} target="_blank" rel="noopener noreferrer" className="act act-yt" whileHover={{ y: -3 }} whileTap={{ scale: 0.95 }}>
+    <ExternalLink size={17} /> {t('vid.youtube')}
+  </motion.a>
+)}
             {dl && (
               <motion.a href={dl} className="act act-primary" whileHover={{ y: -3 }} whileTap={{ scale: 0.95 }} download>
                 <Download size={17} /> {t('vid.download')} {video.bytes ? <small>{formatBytes(video.bytes)}</small> : null}

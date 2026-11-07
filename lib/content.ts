@@ -48,26 +48,30 @@ function localizedOrDefault(stored: Localized | undefined, fallback: Localized):
   return stored && stored.en && stored.en.trim() ? stored : fallback
 }
 
-export async function getSettings(opts: { fresh?: boolean } = {}): Promise<Settings> {
+/** Fill in anything the admin left empty with the built-in defaults. */
+export function withDefaults(stored: Partial<Settings>): Settings {
   const defaults = defaultSettings()
-  if (!cloudConfig()) return defaults
+  return {
+    ...defaults,
+    ...stored,
+    logoUrl: stored.logoUrl || defaults.logoUrl,
+    about: localizedOrDefault(stored.about, defaults.about),
+    mission: localizedOrDefault(stored.mission, defaults.mission),
+    vision: localizedOrDefault(stored.vision, defaults.vision),
+    verse: localizedOrDefault(stored.verse, defaults.verse),
+    verseRef: stored.verseRef || defaults.verseRef,
+    socials: { ...defaults.socials, ...(stored.socials ?? {}) },
+  }
+}
+
+export async function getSettings(opts: { fresh?: boolean } = {}): Promise<Settings> {
+  if (!cloudConfig()) return defaultSettings()
   try {
-    const stored = await readJson<Partial<Settings>>(IDS.settings, {}, opts.fresh)
-    return {
-      ...defaults,
-      ...stored,
-      logoUrl: stored.logoUrl || defaults.logoUrl,
-      about: localizedOrDefault(stored.about, defaults.about),
-      mission: localizedOrDefault(stored.mission, defaults.mission),
-      vision: localizedOrDefault(stored.vision, defaults.vision),
-      verse: localizedOrDefault(stored.verse, defaults.verse),
-      verseRef: stored.verseRef || defaults.verseRef,
-      socials: { ...defaults.socials, ...(stored.socials ?? {}) },
-    }
+    return withDefaults(await readJson<Partial<Settings>>(IDS.settings, {}, opts.fresh))
   } catch (error) {
     if (opts.fresh) throw error
     console.error('[cktv] could not load settings', error)
-    return defaults
+    return defaultSettings()
   }
 }
 

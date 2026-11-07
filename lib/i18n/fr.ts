@@ -167,6 +167,7 @@ const fr: Dictionary = {
   'vid.copy': 'Copier le lien',
   'vid.related': 'À voir aussi',
   'vid.back': 'Toutes les vidéos',
+  'vid.youtube': 'Voir l’épisode complet sur YouTube',
   'nf.title': 'Page introuvable',
   'nf.sub': 'Nous n’avons pas trouvé ce que vous cherchiez.',
   'nf.home': 'Retour à l’accueil',

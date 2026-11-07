@@ -26,6 +26,7 @@ export type Video = {
   duration?: number
   bytes?: number
   format?: string
+  youtubeUrl?: string
 }
 
 export type Post = {

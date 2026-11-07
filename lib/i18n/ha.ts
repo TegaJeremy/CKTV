@@ -168,6 +168,7 @@ const ha: Dictionary = {
   'vid.copy': 'Kwafi hanyar haɗi',
   'vid.related': 'Ƙari don kallo',
   'vid.back': 'Dukkan bidiyo',
+  'vid.youtube': 'Kalli cikakken shirin a YouTube',
   'nf.title': 'Ba a sami shafin ba',
   'nf.sub': 'Ba mu sami abin da kake nema ba.',
   'nf.home': 'Koma gida',

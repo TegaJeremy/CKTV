@@ -1,7 +1,7 @@
 import { revalidatePath } from 'next/cache'
 import { requireAdmin } from '@/lib/admin-auth'
 import { cloudConfig } from '@/lib/cloudinary'
-import { getSettings, saveSettings } from '@/lib/content'
+import { getSettings, saveSettings, withDefaults } from '@/lib/content'
 import { isCloudinaryUrl } from '@/lib/media'
 import type { Localized, Settings } from '@/lib/types'
 
@@ -63,7 +63,7 @@ export async function PUT(req: Request) {
     }
     await saveSettings(settings)
     revalidatePath('/', 'layout')
-    return Response.json({ settings: await getSettings({ fresh: true }) })
+      return Response.json({ settings: withDefaults(settings) })
   } catch (error) {
     return Response.json({ error: (error as Error).message }, { status: 502 })
   }

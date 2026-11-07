@@ -169,6 +169,7 @@ const en = {
   "vid.copy": "Copy link",
   "vid.related": "More to watch",
   "vid.back": "All videos",
+  
   "nf.title": "Page not found",
   "nf.sub": "We could not find what you were looking for.",
   "nf.home": "Back to home",
@@ -182,9 +183,9 @@ const en = {
   "about.story": "Our story",
   "about.mission": "Our mission",
   "about.vision": "Our vision",
-  "about.default.story":
-    "CKTV is a Christian television and podcast channel. We create honest conversations, powerful teaching and uplifting worship so that people everywhere can grow in faith together.",
-  "about.default.mission":
+   "about.default.story":
+    "CKTV is a Christian trend. We bring honest conversations, powerful teaching and uplifting worship into the culture people live in today, so that believers everywhere can grow in faith together.\n\nDo you want to start a podcast or share a message with our audience? Anyone who feels called to teach, speak or create is welcome to come to us. Reach out through our Contact page and let's build something together.",
+    "about.default.mission":
     "To share the message of Christ through media that inspires, teaches and connects people across cultures and languages.",
   "about.default.vision":
     "A world where every home can access faith-filled stories and grow in the Kingdom.",

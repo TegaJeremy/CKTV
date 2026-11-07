@@ -167,6 +167,7 @@ const es: Dictionary = {
   'vid.copy': 'Copiar enlace',
   'vid.related': 'Más para ver',
   'vid.back': 'Todos los videos',
+  'vid.youtube': 'Ver el episodio completo en YouTube',
   'nf.title': 'Página no encontrada',
   'nf.sub': 'No pudimos encontrar lo que buscabas.',
   'nf.home': 'Volver al inicio',

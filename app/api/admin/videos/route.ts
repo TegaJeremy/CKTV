@@ -31,6 +31,8 @@ function cleanVideo(input: Partial<Video>): Video | string {
   const date = /^\d{4}-\d{2}-\d{2}$/.test(String(input.date)) ? String(input.date) : new Date().toISOString().slice(0, 10)
   const assetId = String(input.assetId ?? '')
   const id = String(input.id || assetId.split('/').pop() || slugify(title.en))
+  const yt = String(input.youtubeUrl ?? '').trim()
+const youtubeUrl = /^https:\/\/((www|m)\.)?(youtube\.com|youtu\.be)\//i.test(yt) ? yt : ''
   return {
     id,
     assetId,
@@ -38,6 +40,7 @@ function cleanVideo(input: Partial<Video>): Video | string {
     description: cleanLocalized(input.description),
     category,
     date,
+    youtubeUrl,
     published: input.published !== false,
     src,
     thumb,

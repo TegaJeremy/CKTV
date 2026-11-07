@@ -168,6 +168,7 @@ const yo: Dictionary = {
   'vid.copy': 'Ṣe àdàkọ ìjápọ̀',
   'vid.related': 'Ìyókù láti wò',
   'vid.back': 'Gbogbo fídíò',
+  'vid.youtube': 'Wo ìṣẹ̀lẹ̀ kíkún lórí YouTube',
   'nf.title': 'A kò rí ojú ìwé náà',
   'nf.sub': 'A kò rí ohun tí o ń wá.',
   'nf.home': 'Padà sí ilé',

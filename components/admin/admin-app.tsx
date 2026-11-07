@@ -429,7 +429,7 @@ function VideoEditor({ adminKey, api, draft, onClose, onSaved, toast }: { adminK
     <Modal title={isNew ? 'Upload a video' : 'Edit video'} onClose={saving ? () => undefined : onClose} wide>
       <div className="space-y-5">
         {isNew && (
-          <Field title="Video file" hint="MP4 is best. Large files are uploaded in pieces, so keep this page open until it finishes.">
+          <Field title="Video file" hint="MP4, up to 30 MB (about 4 to 5 minutes at 720p). Add the YouTube link below for the full episode.">
             <FilePick accept="video/*" file={videoFile} onPick={setVideoFile} text="Choose a video…" />
           </Field>
         )}
@@ -446,6 +446,11 @@ function VideoEditor({ adminKey, api, draft, onClose, onSaved, toast }: { adminK
           </Field>
           <Field title="Date"><input type="date" className={input} value={form.date} onChange={(e) => setForm({ ...form, date: e.target.value })} /></Field>
         </div>
+
+        <Field title="Full episode on YouTube (optional)" hint="Paste the YouTube link. The video page will show a button that opens it.">
+          <input className={input} placeholder="https://www.youtube.com/watch?v=..." value={form.youtubeUrl ?? ''} onChange={(e) => setForm({ ...form, youtubeUrl: e.target.value })} />
+        </Field>
+
         <Toggle checked={form.published} onChange={(published) => setForm({ ...form, published })}>Publish on the website (turn off to keep as a draft)</Toggle>
 
         {progress && (

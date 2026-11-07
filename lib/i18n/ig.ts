@@ -168,6 +168,7 @@ const ig: Dictionary = {
   'vid.copy': 'Detuo njikọ',
   'vid.related': 'Ọzọ ị ga-elele',
   'vid.back': 'Vidiyo niile',
+  'vid.youtube': 'Lee ihe omume ahụ zuru ezu na YouTube',
   'nf.title': 'Achọtaghị ibe ahụ',
   'nf.sub': 'Anyị enweghị ike ịchọta ihe ị na-achọ.',
   'nf.home': 'Laghachi n’ụlọ',

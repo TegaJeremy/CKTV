@@ -226,3 +226,8 @@ header.scrolled { box-shadow:0 10px 30px #0f1b3d14; }
 .form-note { color:#8290aa; }
 .nf { display:grid; gap:12px; justify-items:center; padding:90px 20px; text-align:center; }
 .nf b { color:#1d4ed8; font-size:clamp(90px,18vw,160px); letter-spacing:-.08em; line-height:1; }.nf h1 { font-size:30px; margin:0; }.nf p { color:#64708c; margin:0 0 14px; }
+@media (min-width: 1024px) {
+  .menu-button, .mobile-menu { display: none; }
+  
+}
+.act-yt { background:#fff0f0; border-color:#ffc9c9; color:#c4161c; }

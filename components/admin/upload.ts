@@ -44,7 +44,12 @@ function sendPart(ticket: Ticket, blob: Blob, filename: string, range: { start: 
 }
 
 export async function uploadFile(file: File, kind: 'video' | 'image', adminKey: string, onProgress: (percent: number) => void): Promise<UploadResult> {
-  const res = await fetch('/api/admin/sign', {
+    const MAX_VIDEO_MB = 30
+if (kind === 'video' && file.size > MAX_VIDEO_MB * 1024 * 1024) {
+  throw new Error(`This video is ${(file.size / 1048576).toFixed(0)} MB. The limit is ${MAX_VIDEO_MB} MB. Please compress it or upload a shorter clip.`)
+}
+
+   const res = await fetch('/api/admin/sign', {
     method: 'POST',
     headers: { 'content-type': 'application/json', 'x-admin-key': adminKey },
     body: JSON.stringify({ kind, filename: file.name }),
