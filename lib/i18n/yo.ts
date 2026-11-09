@@ -47,11 +47,13 @@ const yo: Dictionary = {
   'cat.teaching': 'Àwọn ẹ̀kọ́',
   'cat.worship': 'Ìjọsìn',
   'cat.interview': 'Àwọn ìfọ̀rọ̀wérọ̀',
+  'cat.event': 'Ìbòjútó ayẹyẹ',
 
   'vcat.podcast': 'Pọ́dkáàsì',
   'vcat.teaching': 'Ẹ̀kọ́',
   'vcat.worship': 'Ìjọsìn',
   'vcat.interview': 'Ìfọ̀rọ̀wérọ̀',
+  'vcat.event': 'Ìbòjútó ayẹyẹ',
 
   'video.v1': 'Agbára Ìgbàgbọ́ Ní Àkókò Àìdánilójú',
   'video.v2': 'Ọ̀rọ̀ Ìjọba: Wíwá Ìpè Rẹ Rí',

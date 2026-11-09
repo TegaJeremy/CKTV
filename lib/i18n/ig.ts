@@ -47,11 +47,13 @@ const ig: Dictionary = {
   'cat.teaching': 'Nkuzi',
   'cat.worship': 'Ofufe',
   'cat.interview': 'Ajụjụ ọnụ',
+  'cat.event': 'Mkpuchi mmemme',
 
   'vcat.podcast': 'Podcast',
   'vcat.teaching': 'Nkuzi',
   'vcat.worship': 'Ofufe',
   'vcat.interview': 'Ajụjụ ọnụ',
+  'vcat.event': 'Mkpuchi mmemme',
 
   'video.v1': 'Ike nke Okwukwe n’Oge Enweghị Nkwenye',
   'video.v2': 'Mkparịta Ụka Alaeze: Ịchọta Oku Gị',

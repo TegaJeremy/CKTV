@@ -3,7 +3,7 @@ import type { Locale } from './i18n'
 /** Text that can be written in several languages. "en" is the fallback. */
 export type Localized = Partial<Record<Locale, string>>
 
-export const CATEGORIES = ['podcast', 'teaching', 'worship', 'interview', 'other'] as const
+export const CATEGORIES = ['podcast', 'teaching', 'worship', 'interview', 'event', 'other'] as const
 export type Category = (typeof CATEGORIES)[number]
 
 export type Video = {

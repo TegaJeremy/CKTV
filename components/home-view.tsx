@@ -4,7 +4,7 @@ import { useMemo, useState, type FormEvent } from 'react'
 import Link from 'next/link'
 import { useRouter } from 'next/navigation'
 import { AnimatePresence, motion, useScroll, useTransform } from 'framer-motion'
-import { ArrowRight, BookOpen, Download, Globe2, MessageCircle, Mic, Music, Play, Plus, Sparkles } from 'lucide-react'
+import { ArrowRight, BookOpen, Camera, Download, Globe2, MessageCircle, Mic, Music, Play, Plus, Sparkles } from 'lucide-react'
 import { HeroCarousel, type HeroSlide } from '@/components/hero-carousel'
 import { useLanguage } from '@/components/language-provider'
 import { CountUp, ease, fadeUp, inView, stagger } from '@/components/motion-kit'
@@ -27,6 +27,7 @@ const chips: { id: 'all' | Category; label: TranslationKey }[] = [
   { id: 'teaching', label: 'cat.teaching' },
   { id: 'worship', label: 'cat.worship' },
   { id: 'interview', label: 'cat.interview' },
+    { id: 'event', label: 'cat.event' },
 ]
 
 const topicCards = [
@@ -34,6 +35,7 @@ const topicCards = [
   { id: 'teaching', label: 'cat.teaching', icon: BookOpen, tone: 'gold' },
   { id: 'worship', label: 'cat.worship', icon: Music, tone: 'coral' },
   { id: 'interview', label: 'cat.interview', icon: MessageCircle, tone: 'navy' },
+    { id: 'event', label: 'cat.event', icon: Camera, tone: 'teal' },
 ] as const satisfies readonly { id: Category; label: TranslationKey; icon: unknown; tone: string }[]
 
 const marquee: TranslationKey[] = ['marq.1', 'marq.2', 'marq.3', 'marq.4', 'marq.5', 'marq.6', 'marq.7']

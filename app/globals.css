@@ -231,3 +231,9 @@ header.scrolled { box-shadow:0 10px 30px #0f1b3d14; }
   
 }
 .act-yt { background:#fff0f0; border-color:#ffc9c9; color:#c4161c; }
+.tone-teal { background:linear-gradient(135deg,#0d9488,#3ddbc4); }
+.topic-grid > :last-child:nth-child(odd) { grid-column:1 / -1; }
+@media (min-width:900px) {
+  .topic-grid { grid-template-columns:repeat(5,1fr); }
+  .topic-grid > :last-child:nth-child(odd) { grid-column:auto; }
+}

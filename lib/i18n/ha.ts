@@ -47,11 +47,13 @@ const ha: Dictionary = {
   'cat.teaching': 'Koyarwa',
   'cat.worship': 'Yabo da Bauta',
   'cat.interview': 'Tattaunawa',
+  'cat.event': 'Rahoton Taro',
 
   'vcat.podcast': 'Podcast',
   'vcat.teaching': 'Koyarwa',
   'vcat.worship': 'Yabo da Bauta',
   'vcat.interview': 'Tattaunawa',
+  'vcat.event': 'Rahoton Taro',
 
   'video.v1': 'Ƙarfin Imani a Lokutan Rashin Tabbas',
   'video.v2': 'Tattaunawar Mulki: Gano Kiranka',

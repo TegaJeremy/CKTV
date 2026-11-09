@@ -16,6 +16,7 @@ const chips: { id: 'all' | Category; label: TranslationKey }[] = [
   { id: 'teaching', label: 'cat.teaching' },
   { id: 'worship', label: 'cat.worship' },
   { id: 'interview', label: 'cat.interview' },
+    { id: 'event', label: 'cat.event' },
   { id: 'other', label: 'cat.other' },
 ]
 

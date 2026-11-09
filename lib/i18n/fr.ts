@@ -46,11 +46,13 @@ const fr: Dictionary = {
   'cat.teaching': 'Enseignements',
   'cat.worship': 'Louange',
   'cat.interview': 'Entretiens',
+  'cat.event': 'Couverture d’événements',
 
   'vcat.podcast': 'Podcast',
   'vcat.teaching': 'Enseignement',
   'vcat.worship': 'Louange',
   'vcat.interview': 'Entretien',
+  'vcat.event': 'Couverture d’événement',
 
   'video.v1': 'La puissance de la foi en temps d’incertitude',
   'video.v2': 'Conversations du Royaume : trouver sa vocation',
@@ -114,6 +116,7 @@ const fr: Dictionary = {
   'marq.6': 'Communauté',
   'marq.7': 'Vocation',
   'cat.other': 'Autres',
+  
   'vcat.other': 'Autre',
   'browse.eyebrow': 'PAR THÈME',
   'browse.title1': 'Choisissez un thème, ',

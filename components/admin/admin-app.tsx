@@ -26,6 +26,9 @@ type Toast = { id: number; text: string; kind: 'ok' | 'error' }
 
 const today = () => new Date().toISOString().slice(0, 10)
 
+/** Name shown in the admin for each category. */
+const categoryLabel = (c: string) => (c === 'event' ? 'Event coverage' : c[0].toUpperCase() + c.slice(1))
+
 function Field({ title, children, hint }: { title: string; children: ReactNode; hint?: string }) {
   return (
     <div>
@@ -359,7 +362,7 @@ function VideosTab({ adminKey, api, videos, setVideos, settings, setSettings, to
                 <div className="h-16 w-28 shrink-0 overflow-hidden rounded-xl bg-[#e3eeff]">{img && <img src={img} alt="" className="h-full w-full object-cover" />}</div>
                 <div className="min-w-0 flex-1">
                   <p className="truncate font-extrabold">{v.title.en}</p>
-                  <p className="text-xs text-[#8290aa]">{v.category} · {v.date}{v.duration ? ` · ${formatDuration(v.duration)}` : ''}{v.bytes ? ` · ${formatBytes(v.bytes)}` : ''}</p>
+                  <p className="text-xs text-[#8290aa]">{categoryLabel(v.category)} · {v.date}{v.duration ? ` · ${formatDuration(v.duration)}` : ''}{v.bytes ? ` · ${formatBytes(v.bytes)}` : ''}</p>
                   <div className="mt-1.5 flex flex-wrap gap-1.5">
                     <button onClick={() => togglePublished(v)} className={`rounded-full px-2.5 py-0.5 text-xs font-bold ${v.published ? 'bg-emerald-50 text-emerald-700' : 'bg-amber-50 text-amber-700'}`}>{v.published ? 'Live' : 'Draft'}</button>
                     {settings.featuredId === v.id && <span className="rounded-full bg-[#fff3c7] px-2.5 py-0.5 text-xs font-bold text-[#a06a00]">★ Featured</span>}
@@ -441,7 +444,7 @@ function VideoEditor({ adminKey, api, draft, onClose, onSaved, toast }: { adminK
         <div className="grid gap-4 sm:grid-cols-2">
           <Field title="Category">
             <select className={input} value={form.category} onChange={(e) => setForm({ ...form, category: e.target.value as Category })}>
-              {CATEGORIES.map((c) => <option key={c} value={c}>{c[0].toUpperCase() + c.slice(1)}</option>)}
+              {CATEGORIES.map((c) => <option key={c} value={c}>{categoryLabel(c)}</option>)}
             </select>
           </Field>
           <Field title="Date"><input type="date" className={input} value={form.date} onChange={(e) => setForm({ ...form, date: e.target.value })} /></Field>

@@ -46,12 +46,15 @@ const es: Dictionary = {
   'cat.teaching': 'Enseñanzas',
   'cat.worship': 'Adoración',
   'cat.interview': 'Entrevistas',
+  'cat.event': 'Cobertura de eventos',
 
   'vcat.podcast': 'Pódcast',
   'vcat.teaching': 'Enseñanza',
   'vcat.worship': 'Adoración',
   'vcat.interview': 'Entrevista',
+  'vcat.event': 'Cobertura de evento',
 
+  
   'video.v1': 'El poder de la fe en tiempos de incertidumbre',
   'video.v2': 'Conversaciones del Reino: descubre tu llamado',
   'video.v3': 'Noche de adoración: canciones de entrega',
